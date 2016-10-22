@@ -30,17 +30,23 @@ public class Bank
         System.out.println("Money on account1 = " + account1.getMoney());
         System.out.println("Money on account2 = " + account2.getMoney());
 
-        int transfer;
-        // перевод вводимой суммы с аккаунта1 на аккаунт2
-        System.out.println("How much money transfer from account1 to account2? ");
-        transfer = scanner.nextInt();
+       // перевод вводимой суммы с аккаунта1 на аккаунт2
 
-        System.out.println("Money on account1 = " + account1.getMoney());
-        System.out.println("Money on account2 = " + account2.getMoney());
+            System.out.println("How much money transfer from account1 to account2? ");
+            int amount = scanner.nextInt();
+            transfer (amount, account1, account2);
+        
+            System.out.println("Money on account1 = " + account1.getMomey());
+            System.out.println("Money on account2 = " + account2.getMomey());
 
         // перевод вводимой суммы с аккаунта2 на аккаунт1
-        System.out.println("How much money transfer from account2 to account1? ");
-        transfer = scanner.nextInt();
+
+            System.out.println("How much money transfer from account2 to account1? ");
+            int amount2 = scanner.nextInt();
+            transfer (amount2, account2, account1);
+
+            System.out.println("Money on account1 = " + account1.getMomey());
+            System.out.println("Money on account2 = " + account2.getMomey());
 
 
         System.out.println("Money on account1 = " + account1.getMoney());
