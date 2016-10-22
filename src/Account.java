@@ -13,13 +13,14 @@ class Account
   {
       this.money = money;
   }
-  public  int getMomey ()
+  public  int getMoney ()
   {
     return money;
   }
 
-   public void Transfer (int transfer)
+    public void Transfer (int transfer, Account from, Account to)
     {
-      money += transfer;
+      from.setMoney(this.money-transfer);  
+      to.setMoney(this.money+transfer);
     }
 }
