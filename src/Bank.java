@@ -47,9 +47,5 @@ public class Bank
 
         System.out.println("Money on account1 = " + account1.getMoney());
         System.out.println("Money on account2 = " + account2.getMoney());
-
-
-        System.out.println("Money on account1 = " + account1.getMoney());
-        System.out.println("Money on account2 = " + account2.getMoney());
     }
 }
