@@ -42,8 +42,8 @@ public class Bank
         // перевод вводимой суммы с аккаунта2 на аккаунт1
 
         System.out.println("How much money transfer from account2 to account1? ");
-        int amount2 = scanner.nextInt();
-        transfer (amount2, account2, account1);
+        amount = scanner.nextInt();
+        transfer (amount, account2, account1);
 
         System.out.println("Money on account1 = " + account1.getMoney());
         System.out.println("Money on account2 = " + account2.getMoney());
