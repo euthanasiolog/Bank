@@ -9,9 +9,6 @@ public class Bank
      */
     public static void transfer (int amount, Account from, Account to)
     {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("skol'ko babok perekinut'? ");
-        amount = scanner.nextInt();
         from.setMoney(from.getMoney()-amount);
         to.setMoney(to.getMoney()+amount);
     }
