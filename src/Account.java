@@ -8,7 +8,6 @@ import java.io.InputStreamReader;
 class Account
 {
   private int money;
-
   public void setMoney (int money)
   {
       this.money = money;
@@ -17,10 +16,4 @@ class Account
   {
     return money;
   }
-
-    public void Transfer (int transfer, Account from, Account to)
-    {
-      from.setMoney(this.money-transfer);  
-      to.setMoney(this.money+transfer);
-    }
 }
