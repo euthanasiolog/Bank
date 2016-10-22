@@ -1,7 +1,3 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 /**
  * Created by Piatrok on 19.10.16.
  */
