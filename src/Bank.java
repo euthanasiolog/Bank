@@ -1,51 +1,42 @@
 import java.util.Scanner;
 public class Bank
 {
-    /**
-     * Делает трансфер денег
-     * @param amount сумма
-     * @param from откуда
-     * @param to куда
-     */
     public static void transfer (int amount, Account from, Account to)
     {
-        from.setMoney(from.getMoney()-amount);
-        to.setMoney(to.getMoney()+amount);
+        from.setMoney(from.getMomey()-amount);
+        to.setMoney(to.getMomey()+amount);
     }
-
+    public static void seeMoney (Account account1, Account account2)
+    {
+        System.out.println("Money on account1 = " + account1.getMomey());
+        System.out.println("Money on account2 = " + account2.getMomey());
+    }
+    public static void putMoney (int amount, Account account)
+    {
+        account.setMoney(amount);
+    }
     public static void main (String[]args)
 
     {
-        // создаю аккаунт1 и зачисляю вводимые из консоли средства
         Account account1 = new Account();
+        Account account2 = new Account();
         System.out.println("set money on account1");
         Scanner scanner = new Scanner(System.in);
-        account1.setMoney(scanner.nextInt());
-
-        // создаю аккаунт2 и зачисляю вводимые из консоли средства
-        Account account2 = new Account();
+        int n = scanner.nextInt();
+        putMoney(n,account1);
         System.out.println("set money on account2");
-        account2.setMoney(scanner.nextInt());
-
-        System.out.println("Money on account1 = " + account1.getMoney());
-        System.out.println("Money on account2 = " + account2.getMoney());
-
-       // перевод вводимой суммы с аккаунта1 на аккаунт2
-
+        int k = scanner.nextInt();
+        putMoney(k,account2);
+        seeMoney(account1,account2);
         System.out.println("How much money transfer from account1 to account2? ");
-        int amount = scanner.nextInt();
-        transfer (amount, account1, account2);
-        
-        System.out.println("Money on account1 = " + account1.getMoney());
-        System.out.println("Money on account2 = " + account2.getMoney());
-
-        // перевод вводимой суммы с аккаунта2 на аккаунт1
-
+        int e = scanner.nextInt();
+        transfer(e,account1,account2);
+        seeMoney(account1,account2);
         System.out.println("How much money transfer from account2 to account1? ");
-        amount = scanner.nextInt();
-        transfer (amount, account2, account1);
-
-        System.out.println("Money on account1 = " + account1.getMoney());
-        System.out.println("Money on account2 = " + account2.getMoney());
-    }
+        int i = scanner.nextInt();
+        transfer(i,account2,account1);
+        seeMoney(account1,account2);
+       }
 }
+
+ 
